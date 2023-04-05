@@ -9,6 +9,5 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - 3200:3200
-    env_file: ./frontend/.env
+      - 80:80
       
