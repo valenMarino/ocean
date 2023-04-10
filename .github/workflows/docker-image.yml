@@ -9,7 +9,8 @@ on:
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
-  IMAGE: valtein94/ocean:main
+  # github.repository as valtein94/ocean
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
 
@@ -55,7 +56,7 @@ jobs:
           context: ./backend
           file: backend/Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/oceanb:latest
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Build and push Docker image FE
@@ -64,5 +65,5 @@ jobs:
           context: ./frontend
           file: frontend/Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ocean:latest
           labels: ${{ steps.meta.outputs.labels }}
