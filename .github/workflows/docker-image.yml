@@ -8,7 +8,8 @@ on:
 
 env:
   # Use docker.io for Docker Hub if empty
-  REGISTRY: docker.io/valtein94/ocean
+  REGISTRY: docker.io
+  IMAGE: valtein94/ocean
 
 jobs:
 
