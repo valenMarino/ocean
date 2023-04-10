@@ -3,13 +3,11 @@ version: '3.6'
 services:
   backend:
     build: ./backend
-    context: ./backend
     ports:
       - 3001:3001
     env_file: ./backend/.env
   frontend:
     build: ./frontend
-    context: ./frontend
     ports:
       - 80:80
       
