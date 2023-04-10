@@ -8,9 +8,7 @@ on:
 
 env:
   # Use docker.io for Docker Hub if empty
-  REGISTRY: docker.io
-  # github.repository as valtein94/ocean
-  IMAGE_NAME: ${{ github.repository }}
+  REGISTRY: docker.io/valtein94/ocean
 
 jobs:
 
