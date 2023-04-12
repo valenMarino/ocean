@@ -52,11 +52,11 @@ jobs:
           
       # Build the images    
       - name: Build the docker-compose stack  
-        run: docker-compose -f ocean/docker-compose.yml build
+        run: docker-compose -f docker-compose.yml build
       # List images
       - name: List images
         run: docker images
       # Push images
       - name: Push images
-        run: docker-compose -f ocean/docker-compose.yml push --ignore-push-failures
+        run: docker-compose -f docker-compose.yml push --ignore-push-failures
 
