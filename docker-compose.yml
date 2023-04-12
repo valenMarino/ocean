@@ -3,11 +3,13 @@ version: '3.6'
 services:
   backend:
     build: ./backend
+    image: valtein94/oceanb
     ports:
       - 3001:3001
     env_file: ./backend/.env
   frontend:
     build: ./frontend
+    image: valtein94/ocean
     ports:
       - 80:80
       
